@@ -19,4 +19,12 @@ public class Pet {
     public void setStrain(String strain) {
         this.strain = strain;
     }
+
+    @Override
+    public String toString() {
+        return "Pet{" +
+                "nickName='" + nickName + '\'' +
+                ", strain='" + strain + '\'' +
+                '}';
+    }
 }
