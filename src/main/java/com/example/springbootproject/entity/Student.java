@@ -1,8 +1,12 @@
 package com.example.springbootproject.entity;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -10,23 +14,40 @@ import java.util.Map;
 
 @Component // 将此Javabean放入Spring容器
 @ConfigurationProperties(prefix = "student")
+//@Validated // 开启JSR303数据校验的注解
+//@PropertySource(value={"classpath:application.properties"})
 public class Student {
-    private String name;
+//    @Value("gawefwe")
+//    @Email
+    private String email;
+
+//    @Value("${student.uname}")
+    private String userName;
+//    @Value("33")
     private int age;
     private boolean sex; // true:男 false:女
     private Date birthday;
     // {province:陕西，city:西安，zone:莲湖区}
+//    @Value("{province:陕西，city:西安，zone:莲湖区}")
     private Map<String, Object> location;
     private String[] hobbies;
     private List<String> skills;
     private Pet pet;
 
-    public String getName() {
-        return name;
+    public String getEmail() {
+        return email;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getAge() {
@@ -88,7 +109,8 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "email='" + email + '\'' +
+                ", userName='" + userName + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
                 ", birthday=" + birthday +
