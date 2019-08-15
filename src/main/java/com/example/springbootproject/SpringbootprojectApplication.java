@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@ImportResource(locations={"classpath:spring.xml"})
+//@ImportResource(locations={"classpath:spring.xml"})
 @SpringBootApplication
 public class SpringbootprojectApplication {
 

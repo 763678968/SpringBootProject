@@ -26,7 +26,7 @@ public class SpringbootprojectApplicationTests {
 
     @Test
     public void test() {
-        StudentService stuService = (StudentService)context.getBean("studentService");
+        StudentService stuService = (StudentService)context.getBean("stuService");
         System.out.println(stuService + "===============");
     }
 
