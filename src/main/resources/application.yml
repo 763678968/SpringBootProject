@@ -1,5 +1,19 @@
 server:
-  port: 8088
+  port: 8883
+#spring:
+#  profiles:
+#    active: dev
+---
+server:
+  port: 8884
+spring:
+  profiles: dev
+---
+server:
+  port: 8885
+spring:
+  profiles: test
+
 
 student:
   uname: x
