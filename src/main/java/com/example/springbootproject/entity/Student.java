@@ -20,7 +20,7 @@ public class Student {
 //    @Value("gawefwe")
 //    @Email
     private String email;
-
+    private String name;
 //    @Value("${student.uname}")
     private String userName;
 //    @Value("33")
@@ -40,6 +40,14 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUserName() {
@@ -110,6 +118,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "email='" + email + '\'' +
+                ", name='" + name + '\'' +
                 ", userName='" + userName + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +

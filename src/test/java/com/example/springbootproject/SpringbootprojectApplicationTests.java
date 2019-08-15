@@ -24,10 +24,10 @@ public class SpringbootprojectApplicationTests {
         System.out.println(student);
     }
 
-    @Test
-    public void test() {
-        StudentService stuService = (StudentService)context.getBean("stuService");
-        System.out.println(stuService + "===============");
-    }
+//    @Test
+//    public void test() {
+//        StudentService stuService = (StudentService)context.getBean("stuService");
+//        System.out.println(stuService + "===============");
+//    }
 
 }
