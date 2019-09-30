@@ -1,5 +1,6 @@
 package com.example.springbootproject;
 
+import com.example.springbootproject.bean.Person;
 import com.example.springbootproject.entity.Student;
 import com.example.springbootproject.service.StudentService;
 import org.junit.Test;
@@ -35,6 +36,14 @@ public class SpringbootprojectApplicationTests {
         logger.info("info********");
         logger.warn("warn********");
         logger.error("error********");
+    }
+
+    @Autowired
+    Person person;
+
+    @Test
+    public void contextLoads2() {
+        System.out.println(person);
     }
 
 //    @Test
